@@ -63,17 +63,6 @@
       font-weight: bold;
     }
 
-    .navbar-center-title {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00ffea;
-      text-shadow: 0 0 10px #00ffea;
-      pointer-events: none;
-    }
-
     .section {
       height: 100vh;
       display: flex;
@@ -144,6 +133,21 @@
       color: #00ffea;
     }
 
+    .navbar-center-title {
+      position: relative; /* Hors de la barre de navigation */
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00ffea;
+      text-shadow: 0 0 10px #00ffea;
+      margin-top: 70px; /* Ajouter de l'espace au-dessus du titre */
+    }
+
+    .navbar-center-title hr {
+      width: 50%;
+      margin: 20px auto;
+      border: 1px solid #00ffea;
+    }
+
     @media (max-width: 768px) {
       .navbar {
         flex-direction: row;
@@ -162,12 +166,12 @@
       }
 
       .navbar-center-title {
-        font-size: 1.1rem;
-        position: relative; /* Remplace "absolute" par "relative" */
-        left: 0;
-        transform: none; /* Enlever le translateX(-50%) pour ajuster le titre */
-        text-align: center; /* Centrer le titre */
-        margin-top: 20px; /* Ajouter un espacement pour descendre le titre */
+        font-size: 1.5rem;
+        margin-top: 50px; /* Ajuster l'espacement du titre sur mobile */
+      }
+
+      .navbar-center-title hr {
+        width: 60%;
       }
     }
   </style>
@@ -181,7 +185,12 @@
         <a onclick="showSection('accueil')">Accueil</a>
       </div>
     </div>
-    <div class="navbar-center-title">💀 Sentinelle 404 💀</div>
+  </div>
+
+  <!-- Titre principal hors de la barre de navigation -->
+  <div class="navbar-center-title">
+    💀 Sentinelle 404 💀
+    <hr />
   </div>
 
   <div id="accueil" class="section">
