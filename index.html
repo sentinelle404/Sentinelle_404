@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>💀 Sentinelle 404 💀</title>
+  <title>Sentinelle 404</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
@@ -163,6 +163,11 @@
 
       .navbar-center-title {
         font-size: 1.1rem;
+        position: relative; /* Remplace "absolute" par "relative" */
+        left: 0;
+        transform: none; /* Enlever le translateX(-50%) pour ajuster le titre */
+        text-align: center; /* Centrer le titre */
+        margin-top: 20px; /* Ajouter un espacement pour descendre le titre */
       }
     }
   </style>
